@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>SKOLUPPGIFT</title>
+</head>
+
+<body>
+    <h1>How many years do you have left in school?</h1>
+  
+    <p></p>
+    
+    <button onclick="myFunction()">Click this button to give your answer</button>
+    
+    <p id="demo"></p>
+    
+    <script>
+
+function myFunction() {
+  //satt länge fast med isNaN koden, försökte laga den längre ner men koden for sönder hela tiden då. så frågade efter hjälp av en ai bot vad det är jag gör fel men curly bracketen fungerar inte och nu måste jag lämna in uppgiften.
+  let text;
+  let userInput = prompt("How many years do you have left in school?", ""); 
+ if (isNaN(userInput)) {
+    text = "Please enter a number!";
+  } else {
+      switch(userInput) {
+        case "0":
+            text = "WOW! Congratulations you made it!";
+            break;
+        case "1":
+            text = "Keep it up! You are almost done!";
+            break;
+        case "2":
+            text = "Well, in this case two is better than three!";
+            break;
+        case "3":
+            text = "Looks like you have just started.";
+            break;
+        case "4":
+            text = "Holy moly sucks to be you!"
+            break;
+        default:
+            text = userInput + (" ") + ("YEARS!?") + (" ") + (" Are you kidding me?!");
+            break;
+      }
+      document.getElementById("demo").innerHTML = text;
+    }
+    </script>
+</body>
+</html>
